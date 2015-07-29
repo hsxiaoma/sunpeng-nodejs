@@ -3,8 +3,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
-        title 苏州厂房网
+        title xxxx网
         link(href="css/bootstrap.min.css", rel="stylesheet")
+        link(href="css/bootstrap-theme.min.css", rel="stylesheet")
         link(href="font-awesome/css/font-awesome.css", rel="stylesheet")
         link(href="css/animate.css", rel="stylesheet")
         link(href="css/style.css", rel="stylesheet")
@@ -12,126 +13,54 @@ html(lang="en")
         script(src='js/jquery-1.10.2.js')
         script(src="js/bootstrap.min.js")
 
-    body(style="background-color: #F3F3F4;")
-        .c-head
-            .c-header
-                .j-lists-header.c-lists-header
-                    h2 菜谱
-                    span.btn.btn-primary.j-activity-btn 活动
-                .j-chosen-header.hide
-                    h2 购物车
-                .j-orders-header.hide
-                    h2 我的订单
-                .j-mine-header.hide
-                    h2 我的信息
-        .row.white-bg.c-lists
-
-            //这里是放菜单的
-            .j-show-lists
-                .c-kinds.j-kinds
-                    span(data-kind="0") 特色
-                    span(data-kind="1") 荤菜
-                    span(data-kind="2") 素菜
-                    span(data-kind="3") 饮品
-                    span(data-kind="4") 主食
-                for menu in menus
-                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-name="#{menu.name}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}",data-ifrecommend="#{menu.ifrecommend}")
-                        .c-picture
-                            img.c-img(src="#{menu.picture}")
-                        .c-food
-                            h2 #{menu.name}
-                            h3 #{menu.description}
-                            .c-choose.j-choose
-                                i ￥#{menu.price}
-                                i.j-use-credit #{menu.creditprice}两
-                            .c-num.j-num.hide
-                                i.fa.fa-minus-square.j-minus
-                                input(type="num", name="num", value=1)
-                                i.fa.fa-plus-square.j-plus
-                .c-list-division
-
-            //这里是放已选的
-            .j-show-chosen.hide
-                .j-chosen
-                .j-no-chosen.c-no-orders 对不起，您并没有选择任何的商品啊~
-                .j-submit
-                    button.btn.btn-primary.c-only-btn.j-submit-btn
-                        |  提交
-
-            //这里是放订单的
-            .j-show-orders.hide
-                .j-orders
-                    //.c-order
-                    //    .c-time 2014-03-24 下单
-                    //    .c-menu
-                    //        span.c-menu-name 外婆红烧肉
-                    //        span x
-                    //        span.c-menu-num 1
-                    //    .c-menu
-                    //        span.c-menu-name 白饭
-                    //        span x
-                    //        span.c-menu-num 1
-                    //    .c-price
-                    //        span 共消费
-                    //        span.c-total ￥144
-                    //        span  使用积分
-                    //        span.c-creditused 480两
-                    //.c-division
-
-
-                .j-no-orders.c-no-orders.hide 对不起，您并没有下任何订单啊~
-
-            .j-show-mine.hide
-                for user in users
-                    .j-user-info(data-level="#{user.level}",data-telephone="#{user.telephone}",data-creditnow="#{user.creditnow}")
-                        p.c-user-info
-                            img.c-user-img(src="#{user.picture}")
-                            span.c-user-tele #{user.telephone}
-                            span.c-user-level Level #{user.level}
-                        .c-division
-                        h3.c-user-info 财富值： #{user.creditnow}
-                        .c-division
-                        h3.c-user-info 性别： #{user.sex}
-
-        .c-foot
-            .j-main-foot.c-foot-div.c-foot-chosen
-                div.text-center
-                    i.fa.fa-home.c-foot-i
-                div.text-center
-                    span
-                        |  主页
-            .j-chosen-foot.c-foot-div
-                div.text-center
-                    i.fa.fa-check-square-o.c-foot-i
-                div.text-center
-                    span
-                        |  购物车
-            .j-orders-foot.c-foot-div
-                div.text-center
-                    i.fa.fa-list-alt.c-foot-i
-                div.text-center
-                    span.j-orders-btn
-                        |  订单
-            .j-mine-foot.c-foot-div
-                div.text-center
-                    i.fa.fa-user.c-foot-i
-                div.text-center
-                    span
-                        |  我的
+    body(style="background-color: #fff;")
+        .c-header xxxx网
+        .c-nav-container
+            .c-wrapper
+                ul.c-nav.clearfix
+                    li.c-nav-li
+                        a.c-a 网站首页
+                    li.c-nav-li
+                        a.c-a 联系我们
+                    li.c-nav-li
+                        a.c-a 联系我们
+                    li.c-nav-li
+                        a.c-a 联系我们
+                    li.c-nav-li
+                        a.c-a 联系我们
+        .c-picture-container
+            .c-wrapper
+                #carousel-example-generic.c-picture-con.carousel.slide(data-ride="carousel")
+                    // Indicators
+                    ol.carousel-indicators
+                        li.active(data-target="#carousel-example-generic", data-slide-to="0")
+                        li(data-target="#carousel-example-generic", data-slide-to="1")
+                        li(data-target="#carousel-example-generic", data-slide-to="2")
+                    // Wrapper for slides
+                    .c-img-div.carousel-inner(role="listbox")
+                        .item.active
+                            img.c-img(src="...", alt="...")
+                            .carousel-caption 测试一下咯
+                        .item
+                            img.c-img(src="...", alt="...")
+                            .carousel-caption 测试一下咯
+                    // Controls
+                    a.left.carousel-control(href="#carousel-example-generic", role="button", data-slide="prev")
+                        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                        span.sr-only Previous
+                    a.right.carousel-control(href="#carousel-example-generic", role="button", data-slide="next")
+                        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                        span.sr-only Next
+        .c-main-container
+            .c-wrapper
+                .c-main-left-con
+                    ul
+                        li
+                        li
+                        li
+                        li
+                .c-main-right-con
 
 
 
-        .c-tip.j-tip.hide
-            h2
-        .c-activity.j-activity
-            span
-                i.fa.fa-times.c-foot-i
-            h2 今日活动
-            - var num = 1;
-            #num
-                for activity in activitys
-                    h3=num
-                        |  #{activity.subject}
-                    - num++;
-                    h4 #{activity.detail}
         script(src='js/page/main.js')

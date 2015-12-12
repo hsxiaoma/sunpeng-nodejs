@@ -4,11 +4,9 @@
 }
 /**/
 .c-nav-container{
-    background-color: #017ebc;
+    background-color: #2BB8AA;
 }
 .c-nav{
-    background-color: #454F8A;
-    list-style: none;
     list-style: none;
     padding: 0;
     height:39px;
@@ -20,18 +18,79 @@
     line-height: 39px;
     height: 39px;
     font-size: 16px;
+    cursor: pointer;
+}
+.c-nav-li a{
+  color: #fff;
 }
 .c-a{
     color:#fff;
+}
+.c-title{
+  margin-left: 22px;
+  border-bottom: 1px solid #ECECEC;
+}
+.c-title .title{
+  font-size: 18px;
+    font-weight: bold;
+    border-bottom: #FF7300 3px solid;
+    line-height: 40px;
+    height: 40px;
+    width: 122px;
+    display: inline-block;
+}
+.c-title .glyphicon{
+  font-size: 16px;
+  color: #f00;
 }
 /*轮播层*/
 .c-picture-con .c-img-div img.c-img{
     width:900px;
     height: 300px;
 }
+/*列表推荐层*/
+.c-list-div{
+  padding: 10px 0 0 5px;
+}
+.c-list-div ul{
+  list-style: none;
+  font-size: 14px;
+}
+.c-list-div ul li{
+  line-height: 30px;
+}
+.c-list-div ul li .time{
+  float: right;
+}
 
+/*下面的推荐层*/
+.c-main-container .c-header{
+  height: 44px;
+}
+.c-main-container .c-div{
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size: 0px;
+}
+.c-main-container .c-div .c-item{
+  display: inline-block;
+  height: 200px;
+  width: 183px;
+  padding: 5px;
+  margin: 10px 10px;
+  box-shadow: 0 1px 3px #ddd;
+  background: #f8f8f8;
+  font-size: 14px;
+}
+.c-main-container .c-div .c-item img{
+  display: inline-block;
+  width: 172px;
+  height: 100px;
+  vertical-align: middle;
+}
 /*全局用到的*/
 .c-wrapper{
-    width: 1020px;
-    margin: 0 auto;
+  width: 1020px;
+  margin: 0 auto;
 }

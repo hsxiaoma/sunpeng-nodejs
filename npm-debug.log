@@ -1,0 +1,81 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bookshelf',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose install initial load of /Users/pyf/code/nodejs/sunpeng-nodejs/package.json
+5 warn package.json sunpeng-nodejs@1.0.0 No description
+6 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/body-parser/package.json
+7 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/connect-flash/package.json
+8 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/express/package.json
+9 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/jade/package.json
+10 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/knex/package.json
+11 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/mysql/package.json
+12 verbose installManyTop reading scoped package data from /Users/pyf/code/nodejs/sunpeng-nodejs/node_modules/passport/package.json
+13 info package.json connect-flash@0.1.1 No license field.
+14 verbose readDependencies loading dependencies from /Users/pyf/code/nodejs/sunpeng-nodejs/package.json
+15 silly cache add args [ 'bookshelf', null ]
+16 verbose cache add spec bookshelf
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: 'bookshelf',
+17 silly cache add   scope: null,
+17 silly cache add   name: 'bookshelf',
+17 silly cache add   rawSpec: '',
+17 silly cache add   spec: '*',
+17 silly cache add   type: 'range' }
+18 silly addNamed bookshelf@*
+19 verbose addNamed "*" is a valid semver range for bookshelf
+20 silly addNameRange { name: 'bookshelf', range: '*', hasData: false }
+21 silly mapToRegistry name bookshelf
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry http://r.npmjs.dp/
+24 silly mapToRegistry uri http://r.npmjs.dp/bookshelf
+25 verbose addNameRange registry:http://r.npmjs.dp/bookshelf not in flight; fetching
+26 verbose request uri http://r.npmjs.dp/bookshelf
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 14:36:31
+29 verbose request id f0d9f951db680ac4
+30 http request GET http://r.npmjs.dp/bookshelf
+31 http 200 http://r.npmjs.dp/bookshelf
+32 verbose bad json <html><head></head><script type="text/javascript">
+32 verbose bad json var sa = "http://202.102.110.207:8080/"; var pp = "108&pre="+(new Date()).getTime();
+32 verbose bad json var s=String(window.location.href); var host=escape(s.substring(7,s.indexOf('/',7)));
+32 verbose bad json var ref=escape(document.referrer); var su = s+"&host="+host+"&refer="+ref+"&server="+pp;
+32 verbose bad json s = escape(s); function loadfr(){ document.getElementById("fr1").src = sa+"3.htm?AIMT="+su; }
+32 verbose bad json function refreshPage(){ document.location = sa+"2.htm?AIMT="+su; }
+32 verbose bad json if (self.location == top.location){ document.location= sa+"1.htm?AIMT="+su; }
+32 verbose bad json else { refreshPage(); }</script><frameset rows="*,0"><frame id="main" src="">
+32 verbose bad json <frame id="fr1" src=""></frameset><body></body></html>
+33 error registry error parsing json
+34 verbose headers { server: 'nginx',
+34 verbose headers   date: 'Sat, 12 Dec 2015 05:32:30 GMT',
+34 verbose headers   'content-type': 'text/html',
+34 verbose headers   'content-length': '686',
+34 verbose headers   'last-modified': 'Fri, 20 Mar 2015 05:09:51 GMT',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   etag: '"550bab9f-2ae"',
+34 verbose headers   'accept-ranges': 'bytes' }
+35 silly get cb [ 304, undefined ]
+36 verbose stack Error: failed to fetch from registry: http://r.npmjs.dp/bookshelf
+36 verbose stack     at /usr/local/lib/node_modules/npm/lib/cache/caching-client.js:163:27
+36 verbose stack     at /usr/local/lib/node_modules/npm/lib/cache/caching-client.js:52:8
+36 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+36 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:89:10
+36 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:204:16)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+37 verbose cwd /Users/pyf/code/nodejs/sunpeng-nodejs
+38 error Darwin 14.1.0
+39 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bookshelf" "--save"
+40 error node v4.2.1
+41 error npm  v2.14.7
+42 error failed to fetch from registry: http://r.npmjs.dp/bookshelf
+43 error If you need help, you may report this error at:
+43 error     <https://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]
